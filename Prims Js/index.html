@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./prism.css">
+</head>
+<body>
+    <style>
+        /* Code block styles */
+        pre {
+          position: relative;
+          padding: 1em;
+          background-color: #f0f0f0;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          width: auto;
+          height: auto;
+        }
+     
+        code {
+          display: block;
+          font-family: "Courier New", monospace;
+        }
+     
+        /* Copy code button styles */
+        .copy-code-button {
+          position: absolute;
+          top: 0.5em;
+          right: 0.5em;
+          padding: 0.5em 1em;
+          font-size: 14px;
+          background-color: #333;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      </style>
+    <pre>
+    <code class="language-css">
+        .token.punctuation {
+            color: #ccc;
+        }
+         
+  
+    </code>
+    <button class="copy-code-button">Copy</button>
+</pre>
+<pre>
+    <code class="language-javascript">
+        // program to find the factorial of a number
+
+        // take input from the user
+        const number = parseInt(prompt('Enter a positive integer: '));
+        
+        // checking if number is negative
+        if (number < 0) {
+            console.log('Error! Factorial for negative number does not exist.');
+        }
+        
+        // if number is 0
+        else if (number === 0) {
+            console.log(`The factorial of ${number} is 1.`);
+        }
+        
+        // if number is positive
+        else {
+            let fact = 1;
+            for (i = 1; i <= number; i++) {
+                fact *= i;
+            }
+            console.log(`The factorial of ${number} is ${fact}.`);
+        }
+         
+  
+    </code>
+    <button class="copy-code-button">Copy</button>
+</pre>
+    <script src="./prism.js"></script>
+    <script>
+        // Add click event listener to each copy code button
+        document.querySelectorAll(".copy-code-button").forEach(function(button) {
+          button.addEventListener("click", function() {
+            // Get the code element
+            var codeElement = this.parentElement.querySelector("code");
+       
+            // Create a temporary textarea to copy the code
+            var textarea = document.createElement("textarea");
+            textarea.value = codeElement.innerText;
+            document.body.appendChild(textarea);
+       
+            // Select and copy the code
+            textarea.select();
+            document.execCommand("copy");
+       
+            // Remove the temporary textarea
+            document.body.removeChild(textarea);
+       
+            // Change the button text to "Copied!" for a short duration
+            var originalText = this.innerText;
+            this.innerText = "Copied!";
+            setTimeout(function() {
+              button.innerText = originalText;
+            }, 1500);
+          });
+        });
+      </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+@font-face {
+    font-family: 'AgokaFamilyRegular';
+    src: url('fonts/AgokaFamilyRegular.eot');
+    src: url('fonts/AgokaFamilyRegular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AgokaFamilyRegular.svg#AgokaFamilyRegular') format('svg'),
+         url('fonts/AgokaFamilyRegular.ttf') format('truetype'),
+         url('fonts/AgokaFamilyRegular.woff') format('woff'),
+         url('fonts/AgokaFamilyRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Vonique64';
+    src: url('fonts/Vonique64.eot');
+    src: url('fonts/Vonique64.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Vonique64.svg#Vonique64') format('svg'),
+         url('fonts/Vonique64.ttf') format('truetype'),
+         url('fonts/Vonique64.woff') format('woff'),
+         url('fonts/Vonique64.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fcb1b1;
+    font-family: 'Josefin Sans', sans-serif;
+}
+section{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: grid;
+    place-items:center;
+    place-contents:center;
+}
+h1{
+      font-family: 'AgokaFamilyRegular';
+    font-size: 65px;
+    padding: 20px;
+}
+p{
+    columns: 2;
+   font-size: 18px
+}
+a{
+    padding: 0px 3px;
+    font-family: 'Vonique64';
+    text-decoration: none;
+    color: #790b0b;
+   font-weight: bold;
+   display: inline-block;
+   font-size: 21px
+}
+  .tippy-box[data-animation='jello'][data-state='hidden'] {
+    opacity: 0;
+    transform: skewX(560deg);
+  }
+    .tippy-box[data-animation='rotate'][data-state='hidden'] {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+.tippy-box[data-animation='big'][data-state='hidden'] {
+    opacity: 0;
+    transform: scale(2,3);
+}

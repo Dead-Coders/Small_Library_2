@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tippy.js (tooltips effect)</title>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <section>
+   	  <h1>Animated ToolTips Effect</h1>
+   	  <p>
+   	  	Lorem <a href="#" id="mybtn">ipsum</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a href="#" id="myBtn">aliqua</a> Ut enim ad minim veniam, quis nostrud  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <a href="#" id="mybtn">exercitation</a> dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="#" id="myButton">incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis dolor aute dolor <a href="#" id="myBtn">reprehenderit</a>  in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a href="#" id="mybtn">Excepteur</a> sint cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, <a href="#" data-tippy-content="Do you enjoy it?">adipiscing</a> elit, sed do eiusmod <a href="#">exercitation</a> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <a href="#" id="mybtn">occaecat</a>  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <a href="#" id="myButton">exercitation</a>  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="#" id="myBtn">consequat</a>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <a href="#" data-tippy-content="Hover me please">cupidatat</a> non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   	  </p>
+   </section>
+
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script type="text/javascript">
+        tippy('#mybtn', {
+            content: 'Please hover again',
+            animation: 'jello',
+            followCursor: false,
+            delay: 500,
+        });
+              tippy('#myBtn', {
+            content: 'Please hover again',
+            animation: 'big',
+            followCursor: false,
+            delay: 500,
+        });
+                    tippy('#myButton', {
+            content: 'Please hover again',
+            animation: 'scale',
+            followCursor: false,
+            delay: 500,
+        });
+  tippy('[data-tippy-content]',{
+  	animation:'rotate',
+  	followCursor:true,
+  	delay:500
+  })
+    </script>
+</body>
+
+</html>

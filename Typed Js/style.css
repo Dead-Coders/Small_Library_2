@@ -1,0 +1,17 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    background-color: rgb(141, 141, 204);
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'JetBrains Mono';
+    text-transform: capitalize;
+}
